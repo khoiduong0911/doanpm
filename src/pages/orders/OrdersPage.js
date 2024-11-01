@@ -125,7 +125,7 @@ function OrdersPage(props) {
                             <option value="3">Đã giao hàng</option>
                         </select>
                     </div>
-                    {/* <div className="result-product">
+                    <div className="result-product">
                         <span>Result :</span>
                         <select className="custom-se" name="result">
                             <option value="5">5</option>
@@ -133,7 +133,7 @@ function OrdersPage(props) {
                             <option value="15">15</option>
                             <option value="20">20</option>
                         </select>
-                    </div> */}
+                    </div>
                 </div>
             </div>
             <div class="card-body m-0 pt-0">

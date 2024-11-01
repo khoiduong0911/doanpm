@@ -71,25 +71,25 @@ function Navbar(props) {
                         </div>
                     </Collapse>
                 </li>
-                {/* <li className="nav-item">
+                <li className="nav-item">
                         <Link to="/Revenue" className="nav-link collapsed" style={{ cursor: 'pointer', display: 'flex' }}>
                         <i className="fas fa-dollar-sign"></i>
                         <span>Doanh thu</span>
                         </Link>
-                </li> */}
+                </li>
                 {/* <li className="nav-item">
                         <Link to="/Dashboard" className="nav-link collapsed" style={{ cursor: 'pointer', display: 'flex' }}>
                         <i className="fas fa-dollar-sign"></i>
                         <span>Tester</span>
                         </Link>
                 </li> */}
-                {/* <li className="nav-item">
+                <li className="nav-item">
                     <Link to="/code" className="nav-link collapsed" style={{ cursor: "pointer", display: 'flex' }}>
                         <i class="fas fa-code"></i>
                         <span>Mã giảm giá</span>
                     </Link>
-                </li> */}
-                {/* <li className="nav-item">
+                </li>
+                <li className="nav-item">
                     <span className="nav-link collapsed" style={{ display: 'flex', alignItems: "center", justifyContent: 'space-between' }}>
                         <span onClick={() => handleActive(2)} style={{ cursor: 'pointer' }}>
                             <i className="fas fa-book-open"></i>
@@ -106,8 +106,8 @@ function Navbar(props) {
                             </div>
                         </div>
                     </Collapse>
-                </li> */}
-                {/* <li className="nav-item">
+                </li>
+                <li className="nav-item">
                     <span className="nav-link collapsed" style={{ display: 'flex', alignItems: "center", justifyContent: 'space-between' }}>
                         <span onClick={() => handleActive(3)} style={{ cursor: 'pointer' }}>
                             <i className="fas fa-book-open"></i>
@@ -124,7 +124,7 @@ function Navbar(props) {
                             </div>
                         </div>
                     </Collapse>
-                </li> */}
+                </li>
                 <li className="nav-item">
                     <Link to="/orders" className="nav-link collapsed" style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center", cursor: 'pointer' }}>
                         <span style={{ cursor: "pointer" }}>
@@ -133,7 +133,7 @@ function Navbar(props) {
                         </span>
                     </Link>
                 </li>
-                {/* <li className="nav-item">
+                <li className="nav-item">
                     <span className="nav-link collapsed" style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center", cursor: 'pointer' }}>
                         <span onClick={() => handleActive(4)} style={{ cursor: "pointer" }}>
                             <i className="fas fa-user"></i>
@@ -152,7 +152,7 @@ function Navbar(props) {
                             </div>
                         </div>
                     </Collapse>
-                </li> */}
+                </li>
 
             </ul>
         </div>

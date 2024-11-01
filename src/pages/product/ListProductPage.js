@@ -155,7 +155,7 @@ function ProductPage(props) {
                         <i class="fas fa-plus-circle"></i>
                         Thêm
                     </button>
-                    {/* <div className="result-product">
+                    <div className="result-product">
                         <span>Result :</span>
                         <select className="custom-se" onChange={onChangeSelect}>
                             <option value="5">5</option>
@@ -163,7 +163,7 @@ function ProductPage(props) {
                             <option value="15">15</option>
                             <option value="20">20</option>
                         </select>
-                    </div> */}
+                    </div>
                 </div>
             </div>
             <div class="card-body m-0 pt-0">

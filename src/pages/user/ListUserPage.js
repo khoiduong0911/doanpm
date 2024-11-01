@@ -117,6 +117,35 @@ function ListUserPage(props) {
             handleDeleteUser(users._id);
         }
     };
+    const onChangeStatus = (e, id) => {
+        axios({
+            method: "POST",
+            url: `${URL_API}/user/update-status`,
+            data: {
+                status: e.target.value,
+                userID: id
+            },
+            headers: { "Authorization": `Bearer ${sessionStorage.getItem('token')}` }
+        })
+        .then(res => {
+            if (res.data.status === "success") {
+                toast.success('Cập nhật trạng thái thành công!', {
+                    position: "top-right",
+                    autoClose: 3000,
+                    closeOnClick: true,
+                    pauseOnHover: true
+                });
+            }
+        })
+        .catch(err => {
+            toast.warning('Cập nhật trạng thái thất bại!', {
+                position: "top-right",
+                autoClose: 3000,
+                closeOnClick: true,
+                pauseOnHover: true
+            });
+        });
+    };
     return (
         <div className="wrapper-product">
             <div class="container-fluid">
@@ -152,6 +181,7 @@ function ListUserPage(props) {
                                 <th className="text-center">STT</th>
                                 <th className="text-center">Email</th>
                                 <th className="text-center">Họ Tên</th>
+                                <th className="text-center">Trạng thái</th>
                                 <th className="text-center">Quyền</th>
                                 <th className="text-center">Số Điện Thoại</th>
                                 <th className="text-center">Ngày tạo</th>
@@ -166,6 +196,15 @@ function ListUserPage(props) {
                                         <td className="text-center">{user.email}</td>
                                         <td className="text-center">{`${user.firstName} ${user.lastName}`}</td>
                                         <td className="text-center">
+                                        <select
+                                            onChange={(e) => onChangeStatus(e, user._id)} // Thêm sự kiện onChange
+                                            className="select-cus">
+                                            <option value="hoạt động" selected={user.status === "hoạt động"}>Hoạt động</option>
+                                            <option value="không hoạt động" selected={user.status === "không hoạt động"}>Không hoạt động</option>
+                                        </select>
+                                        </td>
+
+                                        <td className="text-center">
                                             <select
                                                 onChange={(e) => onChangeRole(e, user._id)}
                                                 className="select-cus">
@@ -176,6 +215,7 @@ function ListUserPage(props) {
                                         </td>
                                         <td className="text-center">{user.phone}</td>
                                         <td className="text-center">{new Date(user.createdAt).toLocaleDateString()}</td>
+                
                                         <td className="text-center">
                                             <button
                                                 onClick={() => confirmDelete(user._id)}
